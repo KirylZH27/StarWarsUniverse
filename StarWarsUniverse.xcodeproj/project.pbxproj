@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		0A8F5A0829915F590028A8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F5A0729915F590028A8FA /* AppDelegate.swift */; };
 		0A8F5A0A29915F590028A8FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F5A0929915F590028A8FA /* SceneDelegate.swift */; };
-		0A8F5A0C29915F590028A8FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F5A0B29915F590028A8FA /* ViewController.swift */; };
 		0A8F5A0F29915F590028A8FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F5A0D29915F590028A8FA /* Main.storyboard */; };
 		0A8F5A1129915F5D0028A8FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F5A1029915F5D0028A8FA /* Assets.xcassets */; };
 		0A8F5A1429915F5D0028A8FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F5A1229915F5D0028A8FA /* LaunchScreen.storyboard */; };
 		0A8F5A1C299160C90028A8FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F5A1B299160C90028A8FA /* GoogleService-Info.plist */; };
+		0A8F5A1F29916F3A0028A8FA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F5A1E29916F3A0028A8FA /* TabBarController.swift */; };
 		0E870486803EEF8BA6D409D3 /* Pods_StarWarsUniverse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258F45BD9D3CB87F116D9B71 /* Pods_StarWarsUniverse.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +21,12 @@
 		0A8F5A0429915F590028A8FA /* StarWarsUniverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsUniverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8F5A0729915F590028A8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A8F5A0929915F590028A8FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0A8F5A0B29915F590028A8FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A8F5A0E29915F590028A8FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A8F5A1029915F5D0028A8FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A8F5A1329915F5D0028A8FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A8F5A1529915F5D0028A8FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A8F5A1B299160C90028A8FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0A8F5A1E29916F3A0028A8FA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		258F45BD9D3CB87F116D9B71 /* Pods_StarWarsUniverse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsUniverse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5F916AEA093C8C98325C7A /* Pods-StarWarsUniverse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsUniverse.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsUniverse/Pods-StarWarsUniverse.debug.xcconfig"; sourceTree = "<group>"; };
 		98B03103D02A46CDE9777DBA /* Pods-StarWarsUniverse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsUniverse.release.xcconfig"; path = "Target Support Files/Pods-StarWarsUniverse/Pods-StarWarsUniverse.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,9 +65,9 @@
 		0A8F5A0629915F590028A8FA /* StarWarsUniverse */ = {
 			isa = PBXGroup;
 			children = (
+				0A8F5A1D29916ED70028A8FA /* TabBarController */,
 				0A8F5A0729915F590028A8FA /* AppDelegate.swift */,
 				0A8F5A0929915F590028A8FA /* SceneDelegate.swift */,
-				0A8F5A0B29915F590028A8FA /* ViewController.swift */,
 				0A8F5A0D29915F590028A8FA /* Main.storyboard */,
 				0A8F5A1029915F5D0028A8FA /* Assets.xcassets */,
 				0A8F5A1229915F5D0028A8FA /* LaunchScreen.storyboard */,
@@ -77,13 +77,20 @@
 			path = StarWarsUniverse;
 			sourceTree = "<group>";
 		};
+		0A8F5A1D29916ED70028A8FA /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				0A8F5A1E29916F3A0028A8FA /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 		155EC15A2F600874A274E55D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				5B5F916AEA093C8C98325C7A /* Pods-StarWarsUniverse.debug.xcconfig */,
 				98B03103D02A46CDE9777DBA /* Pods-StarWarsUniverse.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,7 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A8F5A0C29915F590028A8FA /* ViewController.swift in Sources */,
+				0A8F5A1F29916F3A0028A8FA /* TabBarController.swift in Sources */,
 				0A8F5A0829915F590028A8FA /* AppDelegate.swift in Sources */,
 				0A8F5A0A29915F590028A8FA /* SceneDelegate.swift in Sources */,
 			);
