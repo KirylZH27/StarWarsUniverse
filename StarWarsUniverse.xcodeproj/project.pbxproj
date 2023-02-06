@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A8F5A0829915F590028A8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F5A0729915F590028A8FA /* AppDelegate.swift */; };
+		0A8F5A0A29915F590028A8FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F5A0929915F590028A8FA /* SceneDelegate.swift */; };
+		0A8F5A0C29915F590028A8FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F5A0B29915F590028A8FA /* ViewController.swift */; };
+		0A8F5A0F29915F590028A8FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F5A0D29915F590028A8FA /* Main.storyboard */; };
+		0A8F5A1129915F5D0028A8FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F5A1029915F5D0028A8FA /* Assets.xcassets */; };
+		0A8F5A1429915F5D0028A8FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F5A1229915F5D0028A8FA /* LaunchScreen.storyboard */; };
+		0A8F5A1C299160C90028A8FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F5A1B299160C90028A8FA /* GoogleService-Info.plist */; };
+		0E870486803EEF8BA6D409D3 /* Pods_StarWarsUniverse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258F45BD9D3CB87F116D9B71 /* Pods_StarWarsUniverse.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A8F5A0429915F590028A8FA /* StarWarsUniverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsUniverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A8F5A0729915F590028A8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0A8F5A0929915F590028A8FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0A8F5A0B29915F590028A8FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A8F5A0E29915F590028A8FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A8F5A1029915F5D0028A8FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A8F5A1329915F5D0028A8FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0A8F5A1529915F5D0028A8FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A8F5A1B299160C90028A8FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		258F45BD9D3CB87F116D9B71 /* Pods_StarWarsUniverse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsUniverse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B5F916AEA093C8C98325C7A /* Pods-StarWarsUniverse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsUniverse.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsUniverse/Pods-StarWarsUniverse.debug.xcconfig"; sourceTree = "<group>"; };
+		98B03103D02A46CDE9777DBA /* Pods-StarWarsUniverse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsUniverse.release.xcconfig"; path = "Target Support Files/Pods-StarWarsUniverse/Pods-StarWarsUniverse.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A8F5A0129915F590028A8FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E870486803EEF8BA6D409D3 /* Pods_StarWarsUniverse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A8F59FB29915F580028A8FA = {
+			isa = PBXGroup;
+			children = (
+				0A8F5A0629915F590028A8FA /* StarWarsUniverse */,
+				0A8F5A0529915F590028A8FA /* Products */,
+				155EC15A2F600874A274E55D /* Pods */,
+				F47D01D452F27A951A2F2022 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0A8F5A0529915F590028A8FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A8F5A0429915F590028A8FA /* StarWarsUniverse.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A8F5A0629915F590028A8FA /* StarWarsUniverse */ = {
+			isa = PBXGroup;
+			children = (
+				0A8F5A0729915F590028A8FA /* AppDelegate.swift */,
+				0A8F5A0929915F590028A8FA /* SceneDelegate.swift */,
+				0A8F5A0B29915F590028A8FA /* ViewController.swift */,
+				0A8F5A0D29915F590028A8FA /* Main.storyboard */,
+				0A8F5A1029915F5D0028A8FA /* Assets.xcassets */,
+				0A8F5A1229915F5D0028A8FA /* LaunchScreen.storyboard */,
+				0A8F5A1529915F5D0028A8FA /* Info.plist */,
+				0A8F5A1B299160C90028A8FA /* GoogleService-Info.plist */,
+			);
+			path = StarWarsUniverse;
+			sourceTree = "<group>";
+		};
+		155EC15A2F600874A274E55D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B5F916AEA093C8C98325C7A /* Pods-StarWarsUniverse.debug.xcconfig */,
+				98B03103D02A46CDE9777DBA /* Pods-StarWarsUniverse.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F47D01D452F27A951A2F2022 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				258F45BD9D3CB87F116D9B71 /* Pods_StarWarsUniverse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A8F5A0329915F590028A8FA /* StarWarsUniverse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A8F5A1829915F5D0028A8FA /* Build configuration list for PBXNativeTarget "StarWarsUniverse" */;
+			buildPhases = (
+				4718222D3E8C7A91DC2097B4 /* [CP] Check Pods Manifest.lock */,
+				0A8F5A0029915F590028A8FA /* Sources */,
+				0A8F5A0129915F590028A8FA /* Frameworks */,
+				0A8F5A0229915F590028A8FA /* Resources */,
+				F5FC81D5E84228E4B190EC10 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarWarsUniverse;
+			productName = StarWarsUniverse;
+			productReference = 0A8F5A0429915F590028A8FA /* StarWarsUniverse.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A8F59FC29915F580028A8FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					0A8F5A0329915F590028A8FA = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 0A8F59FF29915F580028A8FA /* Build configuration list for PBXProject "StarWarsUniverse" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A8F59FB29915F580028A8FA;
+			productRefGroup = 0A8F5A0529915F590028A8FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A8F5A0329915F590028A8FA /* StarWarsUniverse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A8F5A0229915F590028A8FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A8F5A1429915F5D0028A8FA /* LaunchScreen.storyboard in Resources */,
+				0A8F5A1C299160C90028A8FA /* GoogleService-Info.plist in Resources */,
+				0A8F5A1129915F5D0028A8FA /* Assets.xcassets in Resources */,
+				0A8F5A0F29915F590028A8FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4718222D3E8C7A91DC2097B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarWarsUniverse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5FC81D5E84228E4B190EC10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsUniverse/Pods-StarWarsUniverse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWarsUniverse/Pods-StarWarsUniverse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarWarsUniverse/Pods-StarWarsUniverse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A8F5A0029915F590028A8FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A8F5A0C29915F590028A8FA /* ViewController.swift in Sources */,
+				0A8F5A0829915F590028A8FA /* AppDelegate.swift in Sources */,
+				0A8F5A0A29915F590028A8FA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0A8F5A0D29915F590028A8FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A8F5A0E29915F590028A8FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0A8F5A1229915F5D0028A8FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A8F5A1329915F5D0028A8FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A8F5A1629915F5D0028A8FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0A8F5A1729915F5D0028A8FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A8F5A1929915F5D0028A8FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B5F916AEA093C8C98325C7A /* Pods-StarWarsUniverse.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 89HUYZRC4L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarWarsUniverse/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.StarWarsUniverse";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A8F5A1A29915F5D0028A8FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98B03103D02A46CDE9777DBA /* Pods-StarWarsUniverse.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 89HUYZRC4L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarWarsUniverse/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.StarWarsUniverse";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A8F59FF29915F580028A8FA /* Build configuration list for PBXProject "StarWarsUniverse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A8F5A1629915F5D0028A8FA /* Debug */,
+				0A8F5A1729915F5D0028A8FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A8F5A1829915F5D0028A8FA /* Build configuration list for PBXNativeTarget "StarWarsUniverse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A8F5A1929915F5D0028A8FA /* Debug */,
+				0A8F5A1A29915F5D0028A8FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A8F59FC29915F580028A8FA /* Project object */;
+}
