@@ -12,18 +12,18 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.ChangeRadiusOfTabbar()
+   //     self.ChangeRadiusOfTabbar()
     }
     
-    func ChangeRadiusOfTabbar(){
+/*    func ChangeRadiusOfTabbar(){
         
             self.tabBar.layer.masksToBounds = true
             self.tabBar.isTranslucent = true
             self.tabBar.layer.cornerRadius = 40
             self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
-
-    func ChangeHeightOfTabbar(){
+    */
+ /*   func ChangeHeightOfTabbar(){
        
            if UIDevice().userInterfaceIdiom == .phone {
                var tabFrame            = tabBar.frame
@@ -32,10 +32,11 @@ class TabBarController: UITabBarController {
                tabBar.frame            = tabFrame
            }
     }
+  */
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.ChangeHeightOfTabbar()
+      //  self.ChangeHeightOfTabbar()
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
@@ -47,7 +48,7 @@ class TabBarController: UITabBarController {
 
             let timeInterval: TimeInterval = 0.5
             let propertyAnimator = UIViewPropertyAnimator(duration: timeInterval, dampingRatio: 0.5) {
-            barItemView.transform = CGAffineTransform.identity.scaledBy(x: 1.9, y: 1.9)
+            barItemView.transform = CGAffineTransform.identity.scaledBy(x: 1.4, y: 1.4)
             }
             propertyAnimator.addAnimations({ barItemView.transform = .identity }, delayFactor: CGFloat(timeInterval))
             propertyAnimator.startAnimation()

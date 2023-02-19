@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FilmCollectionViewCell" customModule="StarWarsUniverse" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="224" height="107"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="224" height="107"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPx-Hq-nPe">
+                        <rect key="frame" x="0.0" y="0.0" width="224" height="107"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPic" translatesAutoresizingMaskIntoConstraints="NO" id="Sfz-fT-aG4">
+                                <rect key="frame" x="0.0" y="0.0" width="224" height="107"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sfz-fT-aG4" secondAttribute="trailing" id="JGu-gz-tge"/>
+                            <constraint firstItem="Sfz-fT-aG4" firstAttribute="leading" secondItem="WPx-Hq-nPe" secondAttribute="leading" id="SfN-rp-PL0"/>
+                            <constraint firstItem="Sfz-fT-aG4" firstAttribute="top" secondItem="WPx-Hq-nPe" secondAttribute="top" id="TnI-ZC-Wc7"/>
+                            <constraint firstAttribute="bottom" secondItem="Sfz-fT-aG4" secondAttribute="bottom" id="wTI-Y0-8kE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="WPx-Hq-nPe" secondAttribute="bottom" id="0My-6s-Wyn"/>
+                <constraint firstItem="WPx-Hq-nPe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HJq-on-az6"/>
+                <constraint firstItem="WPx-Hq-nPe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XaU-YE-C29"/>
+                <constraint firstAttribute="trailing" secondItem="WPx-Hq-nPe" secondAttribute="trailing" id="dRm-VS-Egc"/>
+            </constraints>
+            <size key="customSize" width="224" height="107"/>
+            <connections>
+                <outlet property="pictureFilm" destination="Sfz-fT-aG4" id="dzA-iX-jhf"/>
+                <outlet property="viewForPicture" destination="WPx-Hq-nPe" id="j1J-Aq-DtM"/>
+            </connections>
+            <point key="canvasLocation" x="271.75572519083971" y="39.7887323943662"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="defaultPic" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

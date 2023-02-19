@@ -44,4 +44,28 @@ class APIManager {
             completion(image)
         })
     }
+    
+    func getFilms(completion: @escaping (Result<[FilmModel],Error>) -> Void) {
+        let dataBase = configureFB()
+        dataBase.collection("films").getDocuments { result, error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                guard let result else { return }
+                var filmArray = [FilmModel]()
+                
+                for document in result.documents {
+                    let data = document.data()
+                    guard let imageURLString = data["imageURL"] as? String else {return}
+                    guard let name = data["name"] as? String else { return }
+                    guard let description = data["description"] as? String else { return }
+                  
+                    let filmModel = FilmModel(imageURLString: imageURLString, name: name, description: description)
+                    filmArray.append(filmModel)
+                }
+                completion(.success(filmArray))
+            }
+        }
+        
+    }
 }
