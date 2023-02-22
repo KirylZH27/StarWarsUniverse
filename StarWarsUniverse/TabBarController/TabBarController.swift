@@ -12,17 +12,19 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-   //     self.ChangeRadiusOfTabbar()
+        
+    //    self.ChangeRadiusOfTabbar()
     }
     
-/*    func ChangeRadiusOfTabbar(){
+ /*   func ChangeRadiusOfTabbar(){
         
-            self.tabBar.layer.masksToBounds = true
-            self.tabBar.isTranslucent = true
-            self.tabBar.layer.cornerRadius = 40
-            self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        self.tabBar.layer.masksToBounds = true
+        self.tabBar.isTranslucent = true
+        self.tabBar.layer.cornerRadius = 30
+        self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
     }
-    */
+  */
  /*   func ChangeHeightOfTabbar(){
        
            if UIDevice().userInterfaceIdiom == .phone {

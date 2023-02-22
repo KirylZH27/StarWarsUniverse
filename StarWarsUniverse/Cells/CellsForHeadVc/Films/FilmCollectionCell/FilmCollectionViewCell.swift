@@ -14,7 +14,6 @@ class FilmCollectionViewCell: UICollectionViewCell {
     
     
     @IBOutlet var viewForPicture: UIView!
-    
     @IBOutlet var pictureFilm: UIImageView!
     
     

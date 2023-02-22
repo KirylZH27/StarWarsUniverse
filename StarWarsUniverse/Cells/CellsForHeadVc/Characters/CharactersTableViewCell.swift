@@ -17,7 +17,7 @@ class CharactersTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
+        pictureCharacters.layer.cornerRadius = 12
     }
     
 

@@ -68,4 +68,26 @@ class APIManager {
         }
         
     }
+    func getPlanets(completion: @escaping (Result<[PlanetModel], Error>) -> Void) {
+        let dataBase = configureFB()
+        dataBase.collection("planets").getDocuments { result, error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                guard let result else { return }
+                var planetArray = [PlanetModel]()
+                
+                for document in result.documents {
+                    let data = document.data()
+                    guard let imageURLString = data["imageURL"] as? String else {return}
+                    guard let name = data["name"] as? String else { return }
+                    guard let description = data["description"] as? String else { return }
+                   
+                    let planetModel = PlanetModel(imageURLString: imageURLString, name: name, description: description)
+                    planetArray.append(planetModel)
+                }
+                completion(.success(planetArray))
+            }
+        }
+    }
 }

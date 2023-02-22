@@ -11,9 +11,12 @@ class StarshipsTableViewCell: UITableViewCell {
 
   static let id = String(describing: StarshipsTableViewCell.self)
     
+    @IBOutlet var pictureStarShip: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        pictureStarShip.layer.cornerRadius = 12
     }
 
     

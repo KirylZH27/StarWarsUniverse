@@ -11,7 +11,7 @@ class FilmsTableViewCell: UITableViewCell {
 
     static let id = String(describing: FilmsTableViewCell.self)
     
-  private var films = [FilmModel]()
+    private var films = [FilmModel]()
 
     
     @IBOutlet var collectionView: UICollectionView!

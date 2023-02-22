@@ -11,4 +11,5 @@ enum enumHead: CaseIterable {
     case characters
     case films
     case starships
+    case planets 
 }

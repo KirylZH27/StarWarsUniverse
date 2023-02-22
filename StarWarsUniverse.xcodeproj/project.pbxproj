@@ -28,6 +28,12 @@
 		0A8F5A222991883E0028A8FA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F5A212991883E0028A8FA /* APIManager.swift */; };
 		0A8F5A2629918D750028A8FA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F5A2529918D750028A8FA /* Document.swift */; };
 		0ADDB1DE29A2376D00E6B3F6 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADDB1DD29A2376D00E6B3F6 /* CharactersViewController.swift */; };
+		0ADDB1E029A23F8400E6B3F6 /* StarShipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADDB1DF29A23F8400E6B3F6 /* StarShipsViewController.swift */; };
+		0ADDB1E429A392D000E6B3F6 /* PlanetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADDB1E229A392D000E6B3F6 /* PlanetsTableViewCell.swift */; };
+		0ADDB1E529A392D000E6B3F6 /* PlanetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDB1E329A392D000E6B3F6 /* PlanetsTableViewCell.xib */; };
+		0ADDB1E929A3996600E6B3F6 /* PlanetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADDB1E729A3996600E6B3F6 /* PlanetCollectionViewCell.swift */; };
+		0ADDB1EA29A3996600E6B3F6 /* PlanetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ADDB1E829A3996600E6B3F6 /* PlanetCollectionViewCell.xib */; };
+		0ADDB1EC29A3BC5500E6B3F6 /* PlanetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADDB1EB29A3BC5500E6B3F6 /* PlanetModel.swift */; };
 		0AE2A34129A1196300F80BBE /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2A34029A1196300F80BBE /* FilmModel.swift */; };
 		0E870486803EEF8BA6D409D3 /* Pods_StarWarsUniverse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258F45BD9D3CB87F116D9B71 /* Pods_StarWarsUniverse.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +62,12 @@
 		0A8F5A212991883E0028A8FA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		0A8F5A2529918D750028A8FA /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		0ADDB1DD29A2376D00E6B3F6 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		0ADDB1DF29A23F8400E6B3F6 /* StarShipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarShipsViewController.swift; sourceTree = "<group>"; };
+		0ADDB1E229A392D000E6B3F6 /* PlanetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsTableViewCell.swift; sourceTree = "<group>"; };
+		0ADDB1E329A392D000E6B3F6 /* PlanetsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanetsTableViewCell.xib; sourceTree = "<group>"; };
+		0ADDB1E729A3996600E6B3F6 /* PlanetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCollectionViewCell.swift; sourceTree = "<group>"; };
+		0ADDB1E829A3996600E6B3F6 /* PlanetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanetCollectionViewCell.xib; sourceTree = "<group>"; };
+		0ADDB1EB29A3BC5500E6B3F6 /* PlanetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModel.swift; sourceTree = "<group>"; };
 		0AE2A34029A1196300F80BBE /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
 		258F45BD9D3CB87F116D9B71 /* Pods_StarWarsUniverse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsUniverse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5F916AEA093C8C98325C7A /* Pods-StarWarsUniverse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsUniverse.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsUniverse/Pods-StarWarsUniverse.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +97,7 @@
 		0A330507299E78F000A09A2D /* CellsForHeadVc */ = {
 			isa = PBXGroup;
 			children = (
+				0ADDB1E129A392B500E6B3F6 /* Planets */,
 				0A33051B299E872500A09A2D /* Starships */,
 				0A33050D299E794100A09A2D /* Films */,
 				0A33050C299E792400A09A2D /* Characters */,
@@ -142,6 +155,7 @@
 			children = (
 				0A5AA5AA299E77570003F010 /* HeadViewController.swift */,
 				0ADDB1DD29A2376D00E6B3F6 /* CharactersViewController.swift */,
+				0ADDB1DF29A23F8400E6B3F6 /* StarShipsViewController.swift */,
 			);
 			path = HaedVC;
 			sourceTree = "<group>";
@@ -206,8 +220,28 @@
 				0A8F5A212991883E0028A8FA /* APIManager.swift */,
 				0A8F5A2529918D750028A8FA /* Document.swift */,
 				0AE2A34029A1196300F80BBE /* FilmModel.swift */,
+				0ADDB1EB29A3BC5500E6B3F6 /* PlanetModel.swift */,
 			);
 			path = APIManager;
+			sourceTree = "<group>";
+		};
+		0ADDB1E129A392B500E6B3F6 /* Planets */ = {
+			isa = PBXGroup;
+			children = (
+				0ADDB1E629A3992400E6B3F6 /* PlanetCollectionCell */,
+				0ADDB1E229A392D000E6B3F6 /* PlanetsTableViewCell.swift */,
+				0ADDB1E329A392D000E6B3F6 /* PlanetsTableViewCell.xib */,
+			);
+			path = Planets;
+			sourceTree = "<group>";
+		};
+		0ADDB1E629A3992400E6B3F6 /* PlanetCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				0ADDB1E729A3996600E6B3F6 /* PlanetCollectionViewCell.swift */,
+				0ADDB1E829A3996600E6B3F6 /* PlanetCollectionViewCell.xib */,
+			);
+			path = PlanetCollectionCell;
 			sourceTree = "<group>";
 		};
 		155EC15A2F600874A274E55D /* Pods */ = {
@@ -287,10 +321,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADDB1EA29A3996600E6B3F6 /* PlanetCollectionViewCell.xib in Resources */,
 				0A8F5A1429915F5D0028A8FA /* LaunchScreen.storyboard in Resources */,
 				0A330517299E7A0E00A09A2D /* FilmCollectionViewCell.xib in Resources */,
 				0A8F5A1C299160C90028A8FA /* GoogleService-Info.plist in Resources */,
 				0A8F5A1129915F5D0028A8FA /* Assets.xcassets in Resources */,
+				0ADDB1E529A392D000E6B3F6 /* PlanetsTableViewCell.xib in Resources */,
 				0A8F5A0F29915F590028A8FA /* Main.storyboard in Resources */,
 				0A330511299E795900A09A2D /* FilmsTableViewCell.xib in Resources */,
 				0A33050B299E791F00A09A2D /* CharactersTableViewCell.xib in Resources */,
@@ -352,15 +388,19 @@
 				0A33051E299E87B700A09A2D /* StarshipsTableViewCell.swift in Sources */,
 				0A330510299E795900A09A2D /* FilmsTableViewCell.swift in Sources */,
 				0AE2A34129A1196300F80BBE /* FilmModel.swift in Sources */,
+				0ADDB1EC29A3BC5500E6B3F6 /* PlanetModel.swift in Sources */,
 				0A33051A299E7AD600A09A2D /* enumHead.swift in Sources */,
 				0A8F5A1F29916F3A0028A8FA /* TabBarController.swift in Sources */,
 				0A330516299E7A0E00A09A2D /* FilmCollectionViewCell.swift in Sources */,
 				0A33050A299E791F00A09A2D /* CharactersTableViewCell.swift in Sources */,
 				0A8F5A2629918D750028A8FA /* Document.swift in Sources */,
+				0ADDB1E929A3996600E6B3F6 /* PlanetCollectionViewCell.swift in Sources */,
+				0ADDB1E029A23F8400E6B3F6 /* StarShipsViewController.swift in Sources */,
 				0A8F5A0829915F590028A8FA /* AppDelegate.swift in Sources */,
 				0A7444F7299265C50031EBA9 /* MainController.swift in Sources */,
 				0A8F5A0A29915F590028A8FA /* SceneDelegate.swift in Sources */,
 				0A5AA5AB299E77570003F010 /* HeadViewController.swift in Sources */,
+				0ADDB1E429A392D000E6B3F6 /* PlanetsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
