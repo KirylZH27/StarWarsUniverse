@@ -13,4 +13,5 @@ target 'StarWarsUniverse' do
  pod 'Firebase/Firestore'
  pod 'FirebaseStorage'
  pod  'SDWebImage'
+ pod  'RealmSwift'
 end

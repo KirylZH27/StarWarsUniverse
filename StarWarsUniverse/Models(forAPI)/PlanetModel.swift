@@ -1,13 +1,14 @@
 //
-//  FilmModel.swift
+//  PlanetModel.swift
 //  StarWarsUniverse
 //
-//  Created by Кирилл Жогальский on 18.02.23.
+//  Created by Кирилл Жогальский on 20.02.23.
 //
 
 import Foundation
 
-struct FilmModel {
+struct PlanetModel {
+    
     let imageURLString: String
     let name: String
     let description: String

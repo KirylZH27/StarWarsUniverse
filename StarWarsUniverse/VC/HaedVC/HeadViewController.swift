@@ -22,6 +22,7 @@ class HeadViewController: UIViewController {
         getFilms()
         getPlanets()
         registerCells()
+        saveInRealm()
 
         overrideUserInterfaceStyle = .dark
     }
@@ -58,6 +59,9 @@ class HeadViewController: UIViewController {
         }
     }
     
+    
+    
+    
    private func registerCells() {
         let nib = UINib(nibName: CharactersTableViewCell.id, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: CharactersTableViewCell.id)
@@ -69,7 +73,12 @@ class HeadViewController: UIViewController {
        tableView.register(nib4, forCellReuseIdentifier: PlanetsTableViewCell.id)
     }
     
-    
+    func saveInRealm(){
+     //   RealmManager.shared.saveCharacter(character: CharacterModelRealm(name: "TestName", type: "TestType", imageURLString: "TestURl"))
+     //   RealmManager.shared.saveCharacter(character: CharacterModelRealm(name: "TestName2", type: "TestType2", imageURLString: "TestURl2"))
+        let array = RealmManager.shared.readAllCharacters()
+    //    RealmManager.shared.deleteCharacter(character: array[0])
+    }
     
 }
 
@@ -98,22 +107,25 @@ extension HeadViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         elemets.count
     }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = HeadTableViewHeaderView()
         switch section {
             case 0:
-                return "Characters"
+                view.setTitle(text: "Characters")
+                return view
             case 1:
-                return "Films"
+                view.setTitle(text: "Films")
+                return view
             case 2:
-                return "Starships"
+                view.setTitle(text: "Starships")
+                return view
             case 3:
-                return "Planets"
+                view.setTitle(text: "Planets")
+                return view
             default:
-                return "TestTitle"
+                return nil
         }
     }
-    
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
