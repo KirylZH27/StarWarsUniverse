@@ -77,6 +77,8 @@ class HeadViewController: UIViewController {
      //   RealmManager.shared.saveCharacter(character: CharacterModelRealm(name: "TestName", type: "TestType", imageURLString: "TestURl"))
      //   RealmManager.shared.saveCharacter(character: CharacterModelRealm(name: "TestName2", type: "TestType2", imageURLString: "TestURl2"))
         let array = RealmManager.shared.readAllCharacters()
+        array.forEach { RealmManager.shared.deleteCharacter(character: $0)
+        }
     //    RealmManager.shared.deleteCharacter(character: array[0])
     }
     
@@ -141,6 +143,7 @@ extension HeadViewController: UITableViewDataSource {
                 guard let filmsCell = cell as? FilmsTableViewCell else
                 { return cell }
                 filmsCell.set(films: films)
+                filmsCell.delegate = self
                 return filmsCell
             case 2:
                 let cell = tableView.dequeueReusableCell(withIdentifier: StarshipsTableViewCell.id, for: indexPath)
@@ -189,4 +192,14 @@ extension HeadViewController: UITableViewDataSource {
         
         
     }
+}
+extension HeadViewController: FilmsTableViewCellDelegate {
+    func didSelectFilm(film: FilmModel) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           let filmsVC = storyboard.instantiateViewController(withIdentifier: "FilmDescriptionViewController") as! FilmDescriptionViewController
+           filmsVC.film = film
+           present(filmsVC, animated: true)
+    }
+    
+    
 }

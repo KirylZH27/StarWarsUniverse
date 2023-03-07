@@ -6,10 +6,13 @@
 //
 
 import UIKit
-
+protocol FilmsTableViewCellDelegate: AnyObject {
+    func didSelectFilm(film: FilmModel)
+}
 class FilmsTableViewCell: UITableViewCell {
 
     static let id = String(describing: FilmsTableViewCell.self)
+    weak var delegate: FilmsTableViewCellDelegate?
     
     private var films = [FilmModel]()
 
@@ -37,6 +40,13 @@ class FilmsTableViewCell: UITableViewCell {
 }
 
 extension FilmsTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let film = films[indexPath.row]
+     /*   
+      */
+        delegate?.didSelectFilm(film: film)
+    }
+    
     
 }
 

@@ -19,26 +19,22 @@ class CharactersViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         registerCells()
-
         getCharacters()
         
         self.title = "Characters"
         overrideUserInterfaceStyle = .dark
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
- //       navigationController?.navigationBar.prefersLargeTitles = true
-        let appearance = UINavigationBarAppearance()
-                appearance.backgroundColor = .darkGray
-                
         
-                navigationController?.navigationBar.tintColor = .white
-                navigationController?.navigationBar.standardAppearance = appearance
-                navigationController?.navigationBar.compactAppearance = appearance
-                navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .darkGray
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
         
         let apperanceTabBar = UITabBarAppearance()
         apperanceTabBar.backgroundColor = .darkGray
@@ -59,15 +55,10 @@ class CharactersViewController: UIViewController {
         }
     }
     
-    
-    
     private func registerCells() {
         let nib = UINib(nibName: CharacterTableViewCell.id, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: CharacterTableViewCell.id)
     }
-    
-    
-
 }
 
 extension CharactersViewController: UITableViewDelegate {
@@ -91,9 +82,9 @@ extension CharactersViewController: UITableViewDataSource {
         { return cell }
         
         let imageURL = URL(string: characters[indexPath.row].imageURLString)
-        
         let name = String (characters[indexPath.row].name)
         let type = String (characters[indexPath.row].type)
+        
         characterCell.set(imageURL: imageURL, name: name, type: type)
         
         return characterCell
