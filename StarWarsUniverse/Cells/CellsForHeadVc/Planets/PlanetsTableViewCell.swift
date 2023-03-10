@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol PlanetsTableViewCellDelegate: AnyObject {
+    func didSelectPlanet(planet: PlanetModel)
+}
+
 class PlanetsTableViewCell: UITableViewCell {
 
     static let id = String(describing: PlanetsTableViewCell.self)
+    
+    weak var delegate: PlanetsTableViewCellDelegate?
     
     private var planets = [PlanetModel]()
     
@@ -36,7 +42,10 @@ class PlanetsTableViewCell: UITableViewCell {
 }
 
 extension PlanetsTableViewCell: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let planet = planets[indexPath.row]
+        delegate?.didSelectPlanet(planet: planet)
+    }
 }
 
 extension PlanetsTableViewCell: UICollectionViewDataSource {

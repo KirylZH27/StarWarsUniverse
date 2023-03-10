@@ -22,7 +22,7 @@ class HeadViewController: UIViewController {
         getFilms()
         getPlanets()
         registerCells()
-        saveInRealm()
+   //     saveInRealm()
 
         overrideUserInterfaceStyle = .dark
     }
@@ -73,7 +73,7 @@ class HeadViewController: UIViewController {
        tableView.register(nib4, forCellReuseIdentifier: PlanetsTableViewCell.id)
     }
     
-    func saveInRealm(){
+  /*  func saveInRealm(){
      //   RealmManager.shared.saveCharacter(character: CharacterModelRealm(name: "TestName", type: "TestType", imageURLString: "TestURl"))
      //   RealmManager.shared.saveCharacter(character: CharacterModelRealm(name: "TestName2", type: "TestType2", imageURLString: "TestURl2"))
         let array = RealmManager.shared.readAllCharacters()
@@ -81,6 +81,7 @@ class HeadViewController: UIViewController {
         }
     //    RealmManager.shared.deleteCharacter(character: array[0])
     }
+   */
     
 }
 
@@ -155,6 +156,7 @@ extension HeadViewController: UITableViewDataSource {
                 guard let planetsCell = cell as? PlanetsTableViewCell else
                 { return cell }
                 planetsCell.set(planets: planets)
+                planetsCell.delegate = self
                 return planetsCell
             default:
                 let cell = tableView.dequeueReusableCell(withIdentifier: CharactersTableViewCell.id, for: indexPath)
@@ -193,6 +195,7 @@ extension HeadViewController: UITableViewDataSource {
         
     }
 }
+
 extension HeadViewController: FilmsTableViewCellDelegate {
     func didSelectFilm(film: FilmModel) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -200,6 +203,13 @@ extension HeadViewController: FilmsTableViewCellDelegate {
            filmsVC.film = film
            present(filmsVC, animated: true)
     }
-    
-    
+}
+
+extension HeadViewController: PlanetsTableViewCellDelegate {
+    func didSelectPlanet(planet: PlanetModel) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let planetVC = storyboard.instantiateViewController(withIdentifier: "PlanetDescriptionViewController") as! PlanetDescriptionViewController
+        planetVC.planet = planet
+        present(planetVC, animated: true)
+    }
 }

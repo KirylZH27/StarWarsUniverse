@@ -21,7 +21,7 @@ class CharacterTableViewCell: UITableViewCell {
         characterPicture.layer.cornerRadius = 12
     }
 
-    func set(imageURL: URL?, name: String, type: String){
+    func set(imageURL: URL?, name: String, type: String) {
         characterPicture.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "defaultPic"))
         characterNameLabel.text = name
         typeCharacterLabel.text = type

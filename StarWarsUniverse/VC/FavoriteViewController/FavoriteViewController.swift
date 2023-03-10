@@ -19,18 +19,20 @@ class FavoriteViewController: UIViewController {
     
     @IBOutlet var segmentController: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
+    
     private let emptyView: FavouriteEmptyView = {
        let emptyView = FavouriteEmptyView()
         emptyView.translatesAutoresizingMaskIntoConstraints = false
-        emptyView.backgroundColor = .blue
+        emptyView.backgroundColor = .systemRed
         emptyView.isHidden = true
+        emptyView.layer.cornerRadius = 12
         return emptyView
     }()
     
     
     private var charactersArray: [CharacterModelRealm] = []
     private var filmsArray = [String]()
-    private var starshipsArray = ["starship1","starship2","starship3", "starsghip4"]
+    private var starshipsArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +41,26 @@ class FavoriteViewController: UIViewController {
         tableView.dataSource = self
         registerCells()
         
+        overrideUserInterfaceStyle = .dark
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getCharacters()
+        
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .darkGray
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
+        let apperanceTabBar = UITabBarAppearance()
+        apperanceTabBar.backgroundColor = .darkGray
+        tabBarController?.tabBar.tintColor = .systemRed
+        tabBarController?.tabBar.standardAppearance = apperanceTabBar
+        tabBarController?.tabBar.scrollEdgeAppearance = apperanceTabBar
     }
     
     
@@ -115,11 +131,14 @@ extension FavoriteViewController: UITableViewDataSource {
         
         switch currentSegment {
             case .characters:
-                favoriteCell.set(name: charactersArray[indexPath.row].name)
+                let imageURL = URL(string: charactersArray[indexPath.row].imageURLString)
+                favoriteCell.set(name: charactersArray[indexPath.row].name, imageURL: imageURL)
             case .films:
-                favoriteCell.set(name: filmsArray[indexPath.row])
+                let imageURL = URL(string: charactersArray[indexPath.row].imageURLString)
+                favoriteCell.set(name: filmsArray[indexPath.row], imageURL: imageURL )
             case .starships:
-                favoriteCell.set(name: starshipsArray[indexPath.row])
+                let imageURL = URL(string: charactersArray[indexPath.row].imageURLString)
+                favoriteCell.set(name: starshipsArray[indexPath.row], imageURL: imageURL)
         }
         
         return favoriteCell

@@ -6,12 +6,14 @@
 //
 
 import UIKit
+
 protocol FilmsTableViewCellDelegate: AnyObject {
     func didSelectFilm(film: FilmModel)
 }
 class FilmsTableViewCell: UITableViewCell {
 
     static let id = String(describing: FilmsTableViewCell.self)
+    
     weak var delegate: FilmsTableViewCellDelegate?
     
     private var films = [FilmModel]()
@@ -52,6 +54,7 @@ extension FilmsTableViewCell: UICollectionViewDelegate {
 
 extension FilmsTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return films.count
     }
     

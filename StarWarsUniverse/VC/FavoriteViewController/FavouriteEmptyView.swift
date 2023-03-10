@@ -11,15 +11,17 @@ class FavouriteEmptyView: UIView {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(systemName: "person")
+        imageView.image = UIImage(named: "defaultPic")
         return imageView
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Вы ничего не добавили в избранное"
+        label.text = "You haven't added anything to your favorites"
         label.numberOfLines = 0
+        label.font = label.font.withSize(26)
+        label.textColor = .black
         label.textAlignment = .center
         return label
     }()
