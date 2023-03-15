@@ -19,6 +19,7 @@ class StarshipTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        imageStarShip.layer.cornerRadius = 12
     }
     func set(imageURL: URL?, name: String) {
         imageStarShip.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "defaultStarship"))

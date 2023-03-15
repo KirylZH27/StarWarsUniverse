@@ -11,7 +11,7 @@ class FavoriteViewController: UIViewController {
 
     enum SegmentType {
         case characters
-        case films
+        case planets
         case starships
     }
     
@@ -23,7 +23,7 @@ class FavoriteViewController: UIViewController {
     private let emptyView: FavouriteEmptyView = {
        let emptyView = FavouriteEmptyView()
         emptyView.translatesAutoresizingMaskIntoConstraints = false
-        emptyView.backgroundColor = .systemRed
+        emptyView.backgroundColor = .darkGray
         emptyView.isHidden = true
         emptyView.layer.cornerRadius = 12
         return emptyView
@@ -31,7 +31,7 @@ class FavoriteViewController: UIViewController {
     
     
     private var charactersArray: [CharacterModelRealm] = []
-    private var filmsArray = [String]()
+    private var planetsArray: [PlanetModelRealm] = []
     private var starshipsArray = [String]()
     
     override func viewDidLoad() {
@@ -39,6 +39,7 @@ class FavoriteViewController: UIViewController {
 
         laoutEmptyView()
         tableView.dataSource = self
+        tableView.delegate = self
         registerCells()
         
         overrideUserInterfaceStyle = .dark
@@ -48,6 +49,7 @@ class FavoriteViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getCharacters()
+        getPlanets()
         
         
         let appearance = UINavigationBarAppearance()
@@ -67,7 +69,7 @@ class FavoriteViewController: UIViewController {
     @IBAction func segmentControllerWasPressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
             case 0: currentSegment = .characters
-            case 1: currentSegment = .films
+            case 1: currentSegment = .planets
             case 2: currentSegment = .starships
             default: break
         }
@@ -77,6 +79,12 @@ class FavoriteViewController: UIViewController {
     
     private func getCharacters() {
         charactersArray = RealmManager.shared.readAllCharacters()
+        tableView.reloadData()
+        checkEmpty()
+    }
+    
+    private func getPlanets() {
+        planetsArray = RealmManager.shared.readAllPlanets()
         tableView.reloadData()
         checkEmpty()
     }
@@ -94,8 +102,8 @@ class FavoriteViewController: UIViewController {
         switch currentSegment {
             case .characters:
                 emptyView.isHidden = !charactersArray.isEmpty
-            case .films:
-                emptyView.isHidden = !filmsArray.isEmpty
+            case .planets:
+                emptyView.isHidden = !planetsArray.isEmpty
             case .starships:
                 emptyView.isHidden = !starshipsArray.isEmpty
         }
@@ -116,8 +124,8 @@ extension FavoriteViewController: UITableViewDataSource {
         switch currentSegment {
             case .characters:
                 return charactersArray.count
-            case .films:
-                return filmsArray.count
+            case .planets:
+                return planetsArray.count
             case .starships:
                 return starshipsArray.count
         }
@@ -133,15 +141,34 @@ extension FavoriteViewController: UITableViewDataSource {
             case .characters:
                 let imageURL = URL(string: charactersArray[indexPath.row].imageURLString)
                 favoriteCell.set(name: charactersArray[indexPath.row].name, imageURL: imageURL)
-            case .films:
-                let imageURL = URL(string: charactersArray[indexPath.row].imageURLString)
-                favoriteCell.set(name: filmsArray[indexPath.row], imageURL: imageURL )
+            case .planets:
+                let imageURL = URL(string: planetsArray[indexPath.row].imageURLString)
+                favoriteCell.set(name: planetsArray[indexPath.row].name, imageURL: imageURL )
             case .starships:
                 let imageURL = URL(string: charactersArray[indexPath.row].imageURLString)
                 favoriteCell.set(name: starshipsArray[indexPath.row], imageURL: imageURL)
         }
         
         return favoriteCell
+    }
+    
+}
+
+extension FavoriteViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            switch currentSegment {
+                    
+                case .characters:
+                    RealmManager.shared.deleteCharacter(character: charactersArray[indexPath.row])
+                    charactersArray.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                case .planets:
+                    print("")
+                case .starships:
+                    print("")
+            }
+        }
     }
 }
 

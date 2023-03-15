@@ -12,7 +12,15 @@ class CharactersViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
-    private var filterWord: String? = nil
+    
+    private let emptyView: ChractersEmptyView = {
+       let emptyView = ChractersEmptyView()
+        emptyView.translatesAutoresizingMaskIntoConstraints = false
+        emptyView.backgroundColor = .darkGray
+        emptyView.isHidden = true
+        emptyView.layer.cornerRadius = 12
+        return emptyView
+    }()
     
     private var characters = [CharacterModel]()
     
@@ -24,6 +32,7 @@ class CharactersViewController: UIViewController {
         getCharacters()
         registerCells()
         tableView.keyboardDismissMode = .onDrag
+        laoutEmptyView()
         
         self.title = "Characters"
         overrideUserInterfaceStyle = .dark
@@ -49,26 +58,32 @@ class CharactersViewController: UIViewController {
         tabBarController?.tabBar.scrollEdgeAppearance = apperanceTabBar
     }
     
+    private func laoutEmptyView(){
+        view.addSubview(emptyView)
+        NSLayoutConstraint.activate([
+            emptyView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  16),
+            emptyView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            emptyView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+    
     
     //посмотреть правки if else
-    private func getCharacters() {
+    private func getCharacters(by text: String = "") {
         APIManager.shared.getCharacters { result in
             switch result {
-                case .success(let success):
-                    if self.filterWord == nil || self.filterWord == "" || self.filterWord == " " {
-                        self.characters = success
+                case .success(let characters):
+                    guard !text.isEmpty else {
+                        self.characters = characters
                         self.tableView.reloadData()
-                    } else {
-                        self.characters.removeAll()
-                        for oneCharacter in success {
-                            guard let filterWord = self.filterWord else { return }
-                            let isAppend = oneCharacter.name.range(of: filterWord)
-                            if isAppend != nil {
-                                self.characters.append(oneCharacter)
-                            }
-                        }
-                        self.tableView.reloadData()
-                    }
+                        self.emptyView.isHidden = true
+                        return }
+                    
+                    let filterCharacters =  characters.filter { $0.name.lowercased().contains(text.lowercased()) }
+                    self.emptyView.isHidden = !filterCharacters.isEmpty
+                    self.characters = filterCharacters
+                    self.tableView.reloadData()
+
                 case .failure(let failure):
                     print(failure)
             }
@@ -116,11 +131,6 @@ extension CharactersViewController: UITableViewDataSource {
 extension CharactersViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filterWord = searchText
-    }
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let filterWord else { return }
-        getCharacters()
-        
+        getCharacters(by: searchText)
     }
 }

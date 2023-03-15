@@ -22,6 +22,12 @@ class APIManager {
         return db
     }
     
+    func createUser(userID: String, email: String){
+        let dataBase = configureFB()
+        dataBase.collection("users").document(userID).setData(["email" : email])
+    }
+    
+    
     func getFilms(completion: @escaping (Result<[FilmModel],Error>) -> Void) {
         let dataBase = configureFB()
         dataBase.collection("films").getDocuments { result, error in
@@ -116,4 +122,6 @@ class APIManager {
             }
         }
     }
+    
+    
 }

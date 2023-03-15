@@ -27,4 +27,20 @@ class RealmManager {
             realm.delete(character)
         })
     }
+    
+    
+    
+    func savePlanet(planet: PlanetModelRealm){
+        try? realm.write({
+            realm.add(planet)
+        })
+    }
+    func readAllPlanets() -> [PlanetModelRealm]{
+        return Array(realm.objects(PlanetModelRealm.self))
+    }
+    func deletePlanet(planet: PlanetModelRealm){
+        try? realm.write({
+            realm.delete(planet)
+        })
+    }
 }

@@ -9,17 +9,12 @@ import UIKit
 import SDWebImage
 
 class CharacterDescriptionViewController: UIViewController {
-
-    
     
     @IBOutlet var favoriteButton: UIButton!
     
-    
     @IBOutlet var nameLabel: UILabel!
-    
     @IBOutlet var typeLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
-    
     @IBOutlet var imageCharacter: UIImageView!
     
     var character: CharacterModel?
@@ -63,6 +58,7 @@ class CharacterDescriptionViewController: UIViewController {
    private func set(imageURL: URL?){
         imageCharacter.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "defaultPic"))
     }
+    
     private func findCurrentCharacterInRealm(){
        var arrayCharacter = RealmManager.shared.readAllCharacters()
     

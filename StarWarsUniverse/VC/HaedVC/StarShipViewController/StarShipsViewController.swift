@@ -66,7 +66,13 @@ class StarShipsViewController: UIViewController {
 }
 
 extension StarShipsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let starship = starships[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let starshipVC = storyboard.instantiateViewController(withIdentifier: "StarShipDescriptionViewController") as! StarShipDescriptionViewController
+        starshipVC.starship = starship
+        present(starshipVC, animated: true)
+    }
 }
 
 extension StarShipsViewController: UITableViewDataSource {
