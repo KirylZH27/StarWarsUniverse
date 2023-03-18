@@ -21,6 +21,7 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+         
         
         
     }
@@ -30,6 +31,12 @@ class RegistrationViewController: UIViewController {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
             
             guard error == nil else {
+                let alertView = UIAlertController(title: "Attention", message: error!.localizedDescription, preferredStyle: .alert)
+                let okButton = UIAlertAction(title: "OK", style: .default)
+                
+                alertView.addAction(okButton)
+                self.present(alertView, animated: true, completion: nil)
+                
                 print(error!.localizedDescription) // нужно выводить для пользователя
                 return }
             self.createUserAtFireStore(email: email)
