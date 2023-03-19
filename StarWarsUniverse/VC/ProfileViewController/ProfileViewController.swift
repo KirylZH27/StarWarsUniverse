@@ -17,9 +17,10 @@ class ProfileViewController: UIViewController {
 
     
     @IBOutlet var profileImageView: UIImageView!
-    @IBOutlet var nameTextField: UITextField!
-    @IBOutlet var surnameTextField: UITextField!
-    @IBOutlet var ageTextField: UITextField!
+    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var surnameLabel: UILabel!
+    @IBOutlet var ageLabel: UILabel!
     
     weak var delegate: ProfileViewControllerDelegate?
     
@@ -48,9 +49,9 @@ class ProfileViewController: UIViewController {
     
     private func setUserInformation(profile: ProfileModel) {
         
-        nameTextField.text = profile.name
-        surnameTextField.text = profile.surname
-        ageTextField.text = profile.age
+        nameLabel.text = profile.name
+        surnameLabel.text = profile.surname
+        ageLabel.text = profile.age
     }
     
     
