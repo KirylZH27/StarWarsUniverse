@@ -27,6 +27,9 @@
 		0A5AA5AB299E77570003F010 /* HeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5AA5AA299E77570003F010 /* HeadViewController.swift */; };
 		0A72C03C29B35F7900AC8F0A /* FilmDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A72C03B29B35F7900AC8F0A /* FilmDescriptionViewController.swift */; };
 		0A8071C129AA4C9C00EC3F3E /* HeadTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8071C029AA4C9C00EC3F3E /* HeadTableViewHeaderView.swift */; };
+		0A88D6D229C75DC700EE1567 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A88D6D129C75DC700EE1567 /* ProfileViewController.swift */; };
+		0A88D6D429C75FD400EE1567 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A88D6D329C75FD400EE1567 /* ProfileModel.swift */; };
+		0A88D6D729C7744200EE1567 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A88D6D629C7744200EE1567 /* EditViewController.swift */; };
 		0A8F5A0829915F590028A8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F5A0729915F590028A8FA /* AppDelegate.swift */; };
 		0A8F5A0A29915F590028A8FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F5A0929915F590028A8FA /* SceneDelegate.swift */; };
 		0A8F5A0F29915F590028A8FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F5A0D29915F590028A8FA /* Main.storyboard */; };
@@ -82,6 +85,9 @@
 		0A5AA5AA299E77570003F010 /* HeadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadViewController.swift; sourceTree = "<group>"; };
 		0A72C03B29B35F7900AC8F0A /* FilmDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDescriptionViewController.swift; sourceTree = "<group>"; };
 		0A8071C029AA4C9C00EC3F3E /* HeadTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTableViewHeaderView.swift; sourceTree = "<group>"; };
+		0A88D6D129C75DC700EE1567 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0A88D6D329C75FD400EE1567 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		0A88D6D629C7744200EE1567 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		0A8F5A0429915F590028A8FA /* StarWarsUniverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsUniverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8F5A0729915F590028A8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A8F5A0929915F590028A8FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -322,6 +328,8 @@
 		0A7444F5299265AE0031EBA9 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				0A88D6D529C7742D00EE1567 /* EditViewController */,
+				0A88D6D029C75DA200EE1567 /* ProfileViewController */,
 				0A46609829BE2CCE00F284B0 /* Helpers */,
 				0A46609529BE2A0B00F284B0 /* MainNavigationViewController */,
 				0A46609029BE20F500F284B0 /* RegistrationViewController */,
@@ -330,6 +338,22 @@
 				0AA381A029B38C680000AD5C /* FavoriteViewController */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		0A88D6D029C75DA200EE1567 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A88D6D129C75DC700EE1567 /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
+		0A88D6D529C7742D00EE1567 /* EditViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A88D6D629C7744200EE1567 /* EditViewController.swift */,
+			);
+			path = EditViewController;
 			sourceTree = "<group>";
 		};
 		0A8F59FB29915F580028A8FA = {
@@ -469,6 +493,7 @@
 				0AE2A34029A1196300F80BBE /* FilmModel.swift */,
 				0ADAFC7E29B8CBF600FA37A1 /* StarShipModel.swift */,
 				0ADDB1EB29A3BC5500E6B3F6 /* PlanetModel.swift */,
+				0A88D6D329C75FD400EE1567 /* ProfileModel.swift */,
 			);
 			path = "Models(forAPI)";
 			sourceTree = "<group>";
@@ -616,6 +641,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A88D6D729C7744200EE1567 /* EditViewController.swift in Sources */,
+				0A88D6D429C75FD400EE1567 /* ProfileModel.swift in Sources */,
 				0ADDB1DE29A2376D00E6B3F6 /* CharactersViewController.swift in Sources */,
 				0A46609729BE2A3C00F284B0 /* MainNavigationViewController.swift in Sources */,
 				0AFC727F29A6737800EAA182 /* CharacterModel.swift in Sources */,
@@ -644,6 +671,7 @@
 				0AFC727B29A66A5400EAA182 /* CharacterTableViewCell.swift in Sources */,
 				0AF2D79329BB679400C32D3B /* PlanetModelRealm.swift in Sources */,
 				0AA381A629B39CA00000AD5C /* FavoriteTableViewCell.swift in Sources */,
+				0A88D6D229C75DC700EE1567 /* ProfileViewController.swift in Sources */,
 				0ADDB1E029A23F8400E6B3F6 /* StarShipsViewController.swift in Sources */,
 				0A8F5A0829915F590028A8FA /* AppDelegate.swift in Sources */,
 				0A46609429BE213200F284B0 /* AuthorizationViewController.swift in Sources */,

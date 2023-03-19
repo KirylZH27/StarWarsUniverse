@@ -27,6 +27,46 @@ class APIManager {
         dataBase.collection("users").document(userID).setData(["email" : email])
     }
     
+    func getUserInformation(userId: String,completion: @escaping (Result<ProfileModel, Error>) -> Void) {
+        let dataBase = configureFB()
+        dataBase.collection("users").document(userId).getDocument { result, error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                guard let result else { return }
+                guard let data = result.data() else { return }
+                guard let email = data["email"] as? String else { return }
+                let name = data["name"] as? String
+                let surname = data["surname"] as? String
+                let age = data["age"] as? String
+                let profileModel = ProfileModel(email: email, name: name, surname: surname, age: age)
+                completion(.success(profileModel))
+            }
+        }
+    }
+    
+    func setNewProfileInfo(userId: String, newProfile: ProfileModel, completion: @escaping (Result<Void, Error>) -> Void){
+        let dataBase = configureFB()
+        var data: [String: String] = ["email": newProfile.email]
+        if newProfile.name != nil {
+            data["name"] = newProfile.name!
+        }
+        if newProfile.surname != nil {
+            data["surname"] = newProfile.surname!
+        }
+        if newProfile.age != nil {
+            data["age"] = newProfile.age!
+        }
+        dataBase.collection("users").document(userId).setData(data) { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                
+                completion(.success(Void()))
+                
+            }
+        }
+    }
     
     func getFilms(completion: @escaping (Result<[FilmModel],Error>) -> Void) {
         let dataBase = configureFB()

@@ -35,6 +35,7 @@ class CharactersViewController: UIViewController {
         laoutEmptyView()
         
         self.title = "Characters"
+        
         overrideUserInterfaceStyle = .dark
     }
     
@@ -44,6 +45,8 @@ class CharactersViewController: UIViewController {
 
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .darkGray
+        
+        appearance.titleTextAttributes =  [NSAttributedString.Key.foregroundColor: UIColor.orange]
         navigationController?.navigationBar.tintColor = .systemRed
         
         navigationController?.navigationBar.standardAppearance = appearance

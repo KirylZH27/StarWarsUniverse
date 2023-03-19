@@ -24,7 +24,7 @@ class HeadViewController: UIViewController {
         registerCells()
    //     saveInRealm()
 
-        overrideUserInterfaceStyle = .dark
+       // overrideUserInterfaceStyle = .dark
     }
     
     override func viewWillAppear(_ animated: Bool) {

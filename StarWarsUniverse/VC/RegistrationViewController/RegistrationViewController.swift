@@ -9,19 +9,22 @@ import UIKit
 import FirebaseAuth
 import FirebaseStorage
 
+protocol RegistrationViewControllerDelegate: AnyObject {
+    func registrationWasComplited()
+}
+
 class RegistrationViewController: UIViewController {
     
+  //  var registrationComplited: (() -> Void)?
+    
+    weak var delegate: RegistrationViewControllerDelegate?
     
     @IBOutlet var emailTextField: UITextField!
-    
     @IBOutlet var passwordTextField: UITextField!
-    
     @IBOutlet var repeatPasswordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-         
         
         
     }
@@ -40,6 +43,10 @@ class RegistrationViewController: UIViewController {
                 print(error!.localizedDescription) // нужно выводить для пользователя
                 return }
             self.createUserAtFireStore(email: email)
+            self.delegate?.registrationWasComplited()
+         
+       //     guard let closure = self.registrationComplited else { return }
+       //     closure()
         }
     }
     
@@ -49,3 +56,4 @@ class RegistrationViewController: UIViewController {
     }
     
 }
+
