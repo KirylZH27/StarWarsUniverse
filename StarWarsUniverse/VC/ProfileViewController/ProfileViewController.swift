@@ -15,9 +15,7 @@ protocol ProfileViewControllerDelegate: AnyObject {
 
 class ProfileViewController: UIViewController {
 
-    
     @IBOutlet var profileImageView: UIImageView!
-    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
@@ -26,10 +24,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getUserInformation()
@@ -48,13 +44,10 @@ class ProfileViewController: UIViewController {
     }
     
     private func setUserInformation(profile: ProfileModel) {
-        
         nameLabel.text = profile.name
         surnameLabel.text = profile.surname
         ageLabel.text = profile.age
     }
-    
-    
     
     @IBAction func signOutButton(_ sender: Any) {
         try? Auth.auth().signOut()
@@ -88,5 +81,4 @@ class ProfileViewController: UIViewController {
            let editVC = storyboard.instantiateViewController(withIdentifier: "EditViewController") as! EditViewController
         navigationController?.pushViewController(editVC, animated: true)
     }
-    
 }

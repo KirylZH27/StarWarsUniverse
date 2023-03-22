@@ -10,23 +10,19 @@ import UIKit
 protocol FilmsTableViewCellDelegate: AnyObject {
     func didSelectFilm(film: FilmModel)
 }
+
 class FilmsTableViewCell: UITableViewCell {
 
     static let id = String(describing: FilmsTableViewCell.self)
-    
     weak var delegate: FilmsTableViewCellDelegate?
-    
     private var films = [FilmModel]()
 
-    
     @IBOutlet var collectionView: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         registerCell()
     }
     
@@ -44,12 +40,8 @@ class FilmsTableViewCell: UITableViewCell {
 extension FilmsTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let film = films[indexPath.row]
-     /*   
-      */
         delegate?.didSelectFilm(film: film)
     }
-    
-    
 }
 
 extension FilmsTableViewCell: UICollectionViewDataSource {
@@ -67,13 +59,10 @@ extension FilmsTableViewCell: UICollectionViewDataSource {
         filmsCell.set(imageURL: imageURL)
         return filmsCell
     }
-    
-    
 }
 
 extension FilmsTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 300, height: 180)
-
     }
 }

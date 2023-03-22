@@ -17,7 +17,6 @@ class StarShipDescriptionViewController: UIViewController {
     
     var starship: StarShipModel?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -11,7 +11,6 @@ import SDWebImage
 class PlanetDescriptionViewController: UIViewController {
     
     @IBOutlet var favoriteButton: UIButton!
-    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var imagePlanet: UIImageView!
     @IBOutlet var descriptionText: UITextView!
@@ -19,9 +18,9 @@ class PlanetDescriptionViewController: UIViewController {
     var planet: PlanetModel?
     private var planetRealm: PlanetModelRealm?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         nameLabel.text = planet?.name
         descriptionText.text = planet?.description
         
@@ -54,7 +53,6 @@ class PlanetDescriptionViewController: UIViewController {
         let planetRealm = PlanetModelRealm(name: planet.name, imageURLString: planet.imageURLString)
         return planetRealm
     }
-    
     
     private func findCurrentPlanetInRealm(){
        var arrayPlanet = RealmManager.shared.readAllPlanets()

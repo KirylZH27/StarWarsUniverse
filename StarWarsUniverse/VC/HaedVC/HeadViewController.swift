@@ -16,15 +16,12 @@ class HeadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.delegate = self
         tableView.dataSource = self
         getFilms()
         getPlanets()
         registerCells()
    //     saveInRealm()
-
-       // overrideUserInterfaceStyle = .dark
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +79,6 @@ class HeadViewController: UIViewController {
     //    RealmManager.shared.deleteCharacter(character: array[0])
     }
    */
-    
 }
 
 extension HeadViewController: UITableViewDelegate {
@@ -110,6 +106,7 @@ extension HeadViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         elemets.count
     }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = HeadTableViewHeaderView()
         switch section {
@@ -165,7 +162,6 @@ extension HeadViewController: UITableViewDataSource {
                 return charactersCell
         }
         
-        
     //    let typeCell = elemets[indexPath.row]
         /*
          switch typeCell {
@@ -191,8 +187,6 @@ extension HeadViewController: UITableViewDataSource {
          }
          }
          */
-        
-        
     }
 }
 

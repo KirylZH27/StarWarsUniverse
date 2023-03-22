@@ -11,7 +11,6 @@ import SDWebImage
 class StarshipTableViewCell: UITableViewCell {
 
     @IBOutlet var nameLabel: UILabel!
-    
     @IBOutlet var imageStarShip: UIImageView!
     
     static let id = String(describing: StarshipTableViewCell.self)
@@ -21,10 +20,9 @@ class StarshipTableViewCell: UITableViewCell {
         
         imageStarShip.layer.cornerRadius = 12
     }
+    
     func set(imageURL: URL?, name: String) {
         imageStarShip.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "defaultStarship"))
         nameLabel.text = name
     }
-
-    
 }

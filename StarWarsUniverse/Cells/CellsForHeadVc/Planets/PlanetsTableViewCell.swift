@@ -14,19 +14,15 @@ protocol PlanetsTableViewCellDelegate: AnyObject {
 class PlanetsTableViewCell: UITableViewCell {
 
     static let id = String(describing: PlanetsTableViewCell.self)
-    
     weak var delegate: PlanetsTableViewCellDelegate?
-    
     private var planets = [PlanetModel]()
     
     @IBOutlet var collectionView: UICollectionView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         registerCell()
     }
     
@@ -50,7 +46,6 @@ extension PlanetsTableViewCell: UICollectionViewDelegate {
 
 extension PlanetsTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
         return planets.count
     }
     
@@ -64,9 +59,8 @@ extension PlanetsTableViewCell: UICollectionViewDataSource {
         
         return planetsCell
     }
-    
-    
 }
+
 extension PlanetsTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 180, height: 180)

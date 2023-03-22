@@ -29,13 +29,11 @@ class ChractersEmptyView: UIView {
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        
         layoutElements()
     }
     
     required init?(coder: NSCoder) {
         super .init(coder: coder)
-        
         layoutElements()
     }
     

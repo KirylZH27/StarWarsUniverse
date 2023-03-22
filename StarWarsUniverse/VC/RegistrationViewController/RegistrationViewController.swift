@@ -25,8 +25,6 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     @IBAction func registerButtonWasPressed(_ sender: Any) {
@@ -54,6 +52,5 @@ class RegistrationViewController: UIViewController {
         guard let userID = Auth.auth().currentUser?.uid else { return }
         APIManager.shared.createUser(userID: userID, email: email)
     }
-    
 }
 

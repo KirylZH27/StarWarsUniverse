@@ -26,7 +26,4 @@ class CharacterTableViewCell: UITableViewCell {
         characterNameLabel.text = name
         typeCharacterLabel.text = type
     }
-    
-    
-    
 }

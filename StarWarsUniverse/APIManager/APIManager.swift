@@ -12,6 +12,7 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class APIManager {
+    
     static let shared = APIManager()
     
     private func configureFB() -> Firestore {
@@ -138,7 +139,6 @@ class APIManager {
         }
     }
     
-    
     func getStarShips(completion: @escaping (Result<[StarShipModel], Error>) -> Void) {
         let dataBase = configureFB()
         dataBase.collection("starships").getDocuments { result, error in
@@ -162,6 +162,4 @@ class APIManager {
             }
         }
     }
-    
-    
 }

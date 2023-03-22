@@ -12,7 +12,6 @@ class CharactersViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
-    
     private let emptyView: ChractersEmptyView = {
        let emptyView = ChractersEmptyView()
         emptyView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +25,6 @@ class CharactersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         getCharacters()
@@ -35,8 +33,6 @@ class CharactersViewController: UIViewController {
         laoutEmptyView()
         
         self.title = "Characters"
-        
-        overrideUserInterfaceStyle = .dark
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +49,6 @@ class CharactersViewController: UIViewController {
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
 
-
         let apperanceTabBar = UITabBarAppearance()
         apperanceTabBar.backgroundColor = .darkGray
         tabBarController?.tabBar.tintColor = .systemRed
@@ -69,7 +64,6 @@ class CharactersViewController: UIViewController {
             emptyView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
-    
     
     //посмотреть правки if else
     private func getCharacters(by text: String = "") {
@@ -108,9 +102,9 @@ extension CharactersViewController: UITableViewDelegate {
         present(charactersVC, animated: true)
     }
 }
+
 extension CharactersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     //   print(characters.count)
         return characters.count
     }
     
@@ -127,12 +121,9 @@ extension CharactersViewController: UITableViewDataSource {
         
         return characterCell
     }
-    
-    
 }
 
 extension CharactersViewController: UISearchBarDelegate {
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         getCharacters(by: searchText)
     }

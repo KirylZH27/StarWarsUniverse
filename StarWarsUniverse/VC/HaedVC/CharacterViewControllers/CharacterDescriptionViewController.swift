@@ -20,7 +20,6 @@ class CharacterDescriptionViewController: UIViewController {
     var character: CharacterModel?
     private var characterRealm: CharacterModelRealm?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +33,6 @@ class CharacterDescriptionViewController: UIViewController {
         findCurrentCharacterInRealm()
         changeButtonState()
     }
-    
     
     @IBAction func favoriteButtonWasPressed(_ sender: Any) {
         if characterRealm != nil {
@@ -53,7 +51,6 @@ class CharacterDescriptionViewController: UIViewController {
         let characterRealm = CharacterModelRealm(name: character.name, type: character.type, imageURLString: character.imageURLString)
         return characterRealm
     }
-    
     
    private func set(imageURL: URL?){
         imageCharacter.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "defaultPic"))

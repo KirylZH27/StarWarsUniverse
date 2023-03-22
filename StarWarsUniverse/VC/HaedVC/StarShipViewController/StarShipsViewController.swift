@@ -15,12 +15,10 @@ class StarShipsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.delegate = self
         tableView.dataSource = self
         getStarShips()
         registerCells()
-        
         
         self.title = "Starships"
     }
@@ -35,7 +33,6 @@ class StarShipsViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        
         
         let apperanceTabBar = UITabBarAppearance()
         apperanceTabBar.backgroundColor = .darkGray
@@ -60,9 +57,6 @@ class StarShipsViewController: UIViewController {
         let nib = UINib(nibName: StarshipTableViewCell.id, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: StarshipTableViewCell.id)
     }
-    
-    
-
 }
 
 extension StarShipsViewController: UITableViewDelegate {
@@ -89,6 +83,4 @@ extension StarShipsViewController: UITableViewDataSource {
         starshipCell.set(imageURL: imageURL, name: name)
         return starshipCell
     }
-    
-    
 }

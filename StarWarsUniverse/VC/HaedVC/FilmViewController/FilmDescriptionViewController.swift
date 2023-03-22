@@ -23,8 +23,8 @@ class FilmDescriptionViewController: UIViewController {
         descriptiontext.text = film?.description
         
         set(imageURL: URL(string: film!.imageURLString))
-        
     }
+    
     func set(imageURL: URL?){
         imageFilm.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "starship2"))
     }

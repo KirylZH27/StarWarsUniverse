@@ -8,7 +8,6 @@
 import Foundation
 
 struct StarShipModel {
-    
     let imageURLString: String
     let name: String
     let description: String

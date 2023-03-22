@@ -10,11 +10,8 @@ import FirebaseAuth
 
 class MainNavigationViewController: UIViewController {
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         checkAuthorization()
     }
     
@@ -49,15 +46,14 @@ class MainNavigationViewController: UIViewController {
         guard let childVC = children.first else { return }
         remove(childViewController: childVC)
     }
+    
     private func hideTabBarViewController(){
         guard let childVC = children.first else { return }
         remove(childViewController: childVC)
         
     }
-    
-    
-    
 }
+
 extension MainNavigationViewController: AuthorizationViewControllerDelegate {
     func authWasComplited() {
         hideAuthorizationViewController()

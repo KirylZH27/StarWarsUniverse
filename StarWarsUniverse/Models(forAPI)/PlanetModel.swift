@@ -8,7 +8,6 @@
 import Foundation
 
 struct PlanetModel {
-    
     let imageURLString: String
     let name: String
     let description: String

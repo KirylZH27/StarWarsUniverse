@@ -8,7 +8,6 @@
 import Foundation
 
 struct CharacterModel {
-    
     let imageURLString: String
     let name: String
     let description: String

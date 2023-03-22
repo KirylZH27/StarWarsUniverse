@@ -12,10 +12,8 @@ class FilmCollectionViewCell: UICollectionViewCell {
 
     static let id = String(describing: FilmCollectionViewCell.self)
     
-    
     @IBOutlet var viewForPicture: UIView!
     @IBOutlet var pictureFilm: UIImageView!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +24,4 @@ class FilmCollectionViewCell: UICollectionViewCell {
     func set(imageURL: URL?){
         pictureFilm.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "defaultPic"))
     }
-
-    
 }

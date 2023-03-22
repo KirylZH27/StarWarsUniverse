@@ -17,7 +17,6 @@ class PlanetCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         viewForPicture.layer.cornerRadius = 12
         picturePlanet.layer.cornerRadius = 12
     }

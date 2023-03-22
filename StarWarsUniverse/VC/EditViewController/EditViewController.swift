@@ -19,14 +19,11 @@ class EditViewController: UIViewController {
         super.viewDidLoad()
     }
    
-    
     private func setUserInformation(profile: ProfileModel) {
-        
         nameTextField.text = profile.name
         surnameTextField.text = profile.surname
         ageTextField.text = profile.age
     }
-    
 
     @IBAction func saveEditingButton(_ sender: Any) {
         guard let email = Auth.auth().currentUser?.email else { return }
