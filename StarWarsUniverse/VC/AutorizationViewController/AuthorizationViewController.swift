@@ -27,7 +27,6 @@ class AuthorizationViewController: UIViewController {
         guard let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty else { return }
         Auth.auth().signIn(withEmail: email , password: password){ result, error in
             
-          
             guard error == nil else {
                 
                 let alertView = UIAlertController(title: "Attention", message: error!.localizedDescription, preferredStyle: .alert)
@@ -36,7 +35,7 @@ class AuthorizationViewController: UIViewController {
                 alertView.addAction(okButton)
                 self.present(alertView, animated: true, completion: nil)
                 
-                print(error!.localizedDescription) // нужно выводить для пользователя
+            //    print(error!.localizedDescription) // нужно выводить для пользователя
                 return }
             self.delegate?.authWasComplited()
         }

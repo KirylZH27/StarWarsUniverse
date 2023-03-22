@@ -38,7 +38,7 @@ class RegistrationViewController: UIViewController {
                 alertView.addAction(okButton)
                 self.present(alertView, animated: true, completion: nil)
                 
-                print(error!.localizedDescription) // нужно выводить для пользователя
+               // print(error!.localizedDescription) // нужно выводить для пользователя
                 return }
             self.createUserAtFireStore(email: email)
             self.delegate?.registrationWasComplited()

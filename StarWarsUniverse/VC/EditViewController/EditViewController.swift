@@ -43,7 +43,12 @@ class EditViewController: UIViewController {
                 case.success:
                     self.navigationController?.popViewController(animated: true)
                 case.failure(let error):
-                    print(error.localizedDescription) // alert
+                    let alertView = UIAlertController(title: "Attention", message: error.localizedDescription, preferredStyle: .alert)
+                    let okButton = UIAlertAction(title: "OK", style: .default)
+                    
+                    alertView.addAction(okButton)
+                    self.present(alertView, animated: true, completion: nil)
+                //    print(error.localizedDescription) // alert
             }
         }
     }

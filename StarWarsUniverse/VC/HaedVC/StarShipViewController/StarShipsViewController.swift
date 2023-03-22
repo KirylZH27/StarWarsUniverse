@@ -27,6 +27,10 @@ class StarShipsViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
         
+        parametersForViewWillAppear()
+    }
+    
+    private func parametersForViewWillAppear (){
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .darkGray
         navigationController?.navigationBar.tintColor = .systemRed

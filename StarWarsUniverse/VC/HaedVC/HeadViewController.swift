@@ -11,6 +11,7 @@ class HeadViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
+   var elemets: [enumHead] = enumHead.allCases
    private var films = [FilmModel]()
    private var planets = [PlanetModel]()
     
@@ -29,9 +30,6 @@ class HeadViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    
-    var elemets: [enumHead] = enumHead.allCases
-
     private func getFilms() {
         APIManager.shared.getFilms { result in
             switch result {
@@ -55,9 +53,6 @@ class HeadViewController: UIViewController {
             }
         }
     }
-    
-    
-    
     
    private func registerCells() {
         let nib = UINib(nibName: CharactersTableViewCell.id, bundle: nil)

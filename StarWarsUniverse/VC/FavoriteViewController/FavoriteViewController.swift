@@ -29,29 +29,26 @@ class FavoriteViewController: UIViewController {
         return emptyView
     }()
     
-    
     private var charactersArray: [CharacterModelRealm] = []
     private var planetsArray: [PlanetModelRealm] = []
     private var starshipsArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         laoutEmptyView()
         tableView.dataSource = self
         tableView.delegate = self
         registerCells()
-        
-        overrideUserInterfaceStyle = .dark
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getCharacters()
         getPlanets()
-        
-        
+        parametersForViewWillAppear()
+    }
+    
+    private func parametersForViewWillAppear (){
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .darkGray
         navigationController?.navigationBar.standardAppearance = appearance
@@ -64,7 +61,6 @@ class FavoriteViewController: UIViewController {
         tabBarController?.tabBar.standardAppearance = apperanceTabBar
         tabBarController?.tabBar.scrollEdgeAppearance = apperanceTabBar
     }
-    
     
     @IBAction func segmentControllerWasPressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
@@ -113,11 +109,7 @@ class FavoriteViewController: UIViewController {
         let nib = UINib(nibName: String(describing: FavoriteTableViewCell.self), bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: String(describing: FavoriteTableViewCell.self))
     }
-    
-
-    
 }
-
 
 extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -148,7 +140,6 @@ extension FavoriteViewController: UITableViewDataSource {
                 let imageURL = URL(string: charactersArray[indexPath.row].imageURLString)
                 favoriteCell.set(name: starshipsArray[indexPath.row], imageURL: imageURL)
         }
-        
         return favoriteCell
     }
     
