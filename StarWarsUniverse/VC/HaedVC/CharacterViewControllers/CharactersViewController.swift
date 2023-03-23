@@ -46,7 +46,7 @@ class CharactersViewController: UIViewController {
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .darkGray
         
-        appearance.titleTextAttributes =  [NSAttributedString.Key.foregroundColor: UIColor.orange]
+        appearance.titleTextAttributes =  [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationController?.navigationBar.tintColor = .systemRed
         
         navigationController?.navigationBar.standardAppearance = appearance

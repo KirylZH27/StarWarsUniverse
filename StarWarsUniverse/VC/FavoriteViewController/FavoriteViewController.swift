@@ -154,8 +154,14 @@ extension FavoriteViewController: UITableViewDelegate {
                     RealmManager.shared.deleteCharacter(character: charactersArray[indexPath.row])
                     charactersArray.remove(at: indexPath.row)
                     tableView.deleteRows(at: [indexPath], with: .fade)
+                    tableView.reloadData()
+                    checkEmpty()
                 case .planets:
-                    print("")
+                    RealmManager.shared.deletePlanet(planet: planetsArray[indexPath.row])
+                    planetsArray.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                    tableView.reloadData()
+                    checkEmpty()
                 case .starships:
                     print("")
             }
